@@ -1,0 +1,57 @@
+				<div class="copy_right py-4 text-center">
+					<p class="text-white">© 2018 Arc Artel
+					</p>
+				</div>
+				<!-- //copyright -->
+
+
+				<!-- Js files -->
+				<!-- JavaScript -->
+				<script src="/js/jquery-2.2.3.min.js"></script>
+				<!-- Default-JavaScript-File -->
+				<script src="/js/bootstrap.js"></script>
+				<!-- Necessary-JavaScript-File-For-Bootstrap -->
+
+				<!-- flexSlider (for testimonials) -->
+				<link rel="stylesheet" href="/css/flexslider.css" type="text/css" media="screen" property="" />
+				<script defer src="/js/jquery.flexslider.js"></script>
+				<script>
+					$(window).load(function () {
+						$('.flexslider').flexslider({
+							animation: "slide",
+							start: function (slider) {
+								$('body').removeClass('loading');
+							}
+						});
+					});
+				</script>
+				<!-- //flexSlider (for testimonials) -->
+				<script src="/js/login_register.js"></script>
+				<!-- stats -->
+				<script src="/js/jquery.waypoints.min.js"></script>
+				<script src="/js/jquery.countup.js"></script>
+				<script>
+					$('.counter').countUp();
+				</script>
+				<!-- //stats -->
+
+				<!-- password-script -->
+				<script>
+					window.onload = function () {
+						document.getElementById("password1").onchange = validatePassword;
+						document.getElementById("password2").onchange = validatePassword;
+					}
+
+					function validatePassword() {
+						var pass2 = document.getElementById("password2").value;
+						var pass1 = document.getElementById("password1").value;
+						if (pass1 != pass2)
+							document.getElementById("password2").setCustomValidity("Passwords Don't Match");
+						else
+							document.getElementById("password2").setCustomValidity('');
+
+			//empty string means no validation error
+		}
+
+</body>
+</html>
